@@ -1,0 +1,8 @@
+{
+  "name": "competitor-app",
+  "private": true,
+  "scripts": {
+    "dev": "npx serve -l 8081",
+    "start": "npx serve -l 8081"
+  }
+}

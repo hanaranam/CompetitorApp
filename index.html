@@ -20,23 +20,23 @@
 
         <section class="screen screen-home is-visible">
           <header class="home-header">
-            <h1 class="greeting-title greeting-title-single">
-              Time for an afternoon treat, <span class="greeting-name">Hanara</span>?
-            </h1>
-            <button class="avatar-button" aria-label="Profile">
-              <span class="avatar-initial">H</span>
+            <div class="home-greeting-wrap">
+              <h1 class="home-greeting-title">Time for an afternoon treat, <span class="home-greeting-name">Hanara</span>?</h1>
+            </div>
+            <button class="home-avatar js-quick-profile" aria-label="Profile">
+              <span class="home-avatar-initial">H</span>
             </button>
           </header>
 
           <nav class="home-quick-nav" aria-label="Quick links">
-            <button class="home-quick-link is-active">
-              <span class="home-quick-icon home-quick-inbox">
-                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            <button class="home-quick-link js-quick-inbox is-active">
+              <span class="home-quick-icon">
+                <svg class="home-quick-inbox-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
                 <span class="home-quick-dot"></span>
               </span>
               <span class="home-quick-label">Inbox</span>
             </button>
-            <button class="home-quick-link">
+            <button class="home-quick-link js-quick-stores">
               <span class="home-quick-icon">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
               </span>
@@ -56,171 +56,251 @@
             </button>
           </nav>
 
-          <section class="rewards-card home-rewards" aria-label="Rewards progress">
-            <div class="rewards-header rewards-header-lg">
+          <section class="home-card home-rewards" aria-label="Rewards progress">
+            <div class="home-rewards-top">
               <div>
-                <p class="rewards-balance rewards-balance-lg">
-                  <span class="rewards-count">156</span>
-                  <span class="rewards-unit">★</span>
-                </p>
-                <p class="rewards-label">Star balance</p>
+                <p class="home-rewards-balance"><span class="rewards-count">156</span> ★</p>
+                <p class="home-rewards-label">Star balance</p>
               </div>
-              <button class="rewards-options-button">
-                Rewards options
-                <span class="rewards-chevron">▼</span>
-              </button>
+              <button type="button" class="home-rewards-options">Rewards options</button>
             </div>
-            <div class="rewards-progress">
-              <div class="rewards-progress-track">
-                <div class="rewards-progress-fill" style="width: 38%"></div>
-                <span class="rewards-pin" style="left: 38%"></span>
-              </div>
-              <div class="rewards-tiers">
-                <span class="rewards-tier-label">25</span>
-                <span class="rewards-tier-label">100</span>
-                <span class="rewards-tier-label">200</span>
-                <span class="rewards-tier-label">300</span>
-                <span class="rewards-tier-label">400</span>
-              </div>
+            <div class="home-rewards-bar">
+              <div class="home-rewards-fill" style="width: 38%"></div>
             </div>
-            <div class="rewards-actions">
-              <button class="rewards-details-outline">Details</button>
-              <button class="rewards-redeem-button">Redeem</button>
+            <div class="home-rewards-tiers">
+              <span>25</span><span>100</span><span>200</span><span>300</span><span>400</span>
+            </div>
+            <div class="home-rewards-actions">
+              <button type="button" class="home-btn-outline">Details</button>
+              <button type="button" class="home-btn-primary">Redeem</button>
             </div>
           </section>
 
-          <section class="home-group-card" aria-label="Start group order">
-            <h2 class="home-group-title">Order together, pick up together</h2>
-            <p class="home-group-desc">
+          <section class="home-card home-group-card" aria-label="Start group order">
+            <h2 class="home-card-title">Order together, pick up together</h2>
+            <p class="home-card-desc">
               Start a group order so everyone can add their drink and you all pick up at the same time.
             </p>
-            <button class="primary-button full-width js-start-group">
+            <button type="button" class="home-btn-primary full-width js-start-group">
               Start group order session
             </button>
           </section>
 
-          <section class="home-bonus-card">
-            <p class="home-bonus-eyebrow">Collect</p>
+          <section class="home-card home-bonus-card">
+            <p class="home-bonus-label">Collect</p>
             <p class="home-bonus-title">100 Bonus Stars ★</p>
             <p class="home-bonus-dates">Feb 23–Mar 1</p>
           </section>
 
-          <section class="hero-card home-hero" aria-label="Iced Matcha Oat Latte">
-            <div class="hero-image-wrap">
-              <img src="images/icedmatchaoatlatte.jpeg" alt="Iced Matcha Oat Latte" class="hero-img" />
+          <section class="home-section">
+            <div class="home-section-head">
+              <h2 class="home-section-title">Popular drinks</h2>
+              <button type="button" class="home-section-link">View all</button>
             </div>
-            <div class="hero-content">
-              <p class="hero-label">Popular item lately</p>
-              <h2 class="hero-title">Iced Matcha Oat Latte</h2>
-              <p class="hero-subtitle">Lightly sweet, extra smooth, perfect for a walk.</p>
-            </div>
-            <button class="hero-scan-button">Scan in store</button>
+
+            <article class="home-promo-card" aria-label="Iced Matcha Latte">
+              <div class="home-promo-image-wrap">
+                <img src="images/icedmatchaoatlatte.jpeg" alt="" class="home-promo-img" />
+              </div>
+              <div class="home-promo-content">
+                <p class="home-promo-label">Popular item lately</p>
+                <h3 class="home-promo-title">Iced Matcha Latte</h3>
+                <p class="home-promo-desc">Lightly sweet, extra smooth, perfect for a walk.</p>
+              </div>
+              <button type="button" class="home-promo-cta js-explore-promo" data-target="order">Explore matcha</button>
+            </article>
+
+            <article class="home-promo-card" aria-label="Sweet pistachio comfort">
+              <div class="home-promo-image-wrap">
+                <img src="images/cappuccino.jpg" alt="" class="home-promo-img" />
+              </div>
+              <div class="home-promo-content">
+                <p class="home-promo-label">New</p>
+                <h3 class="home-promo-title">Sweet pistachio comfort</h3>
+                <p class="home-promo-desc">Make any moment better with a silky-smooth Pistachio Cream Cold Brew or full-bodied Pistachio Latte.</p>
+              </div>
+              <button type="button" class="home-promo-cta js-explore-promo" data-target="order">Explore pistachio</button>
+            </article>
+
+            <article class="home-promo-card" aria-label="Viral fave takes the cake">
+              <div class="home-promo-image-wrap">
+                <img src="images/chocolateloafcake.png" alt="" class="home-promo-img" />
+              </div>
+              <div class="home-promo-content">
+                <p class="home-promo-label">Bakery</p>
+                <h3 class="home-promo-title">Viral fave takes the cake</h3>
+                <p class="home-promo-desc">Experience the swirl of our new Chocolate Pistachio Loaf. Rich, nutty, and here to stay.</p>
+              </div>
+              <button type="button" class="home-promo-cta js-explore-promo" data-target="order">Explore chocolate loaf</button>
+            </article>
           </section>
+        </section>
+
+        <section class="screen screen-stores" aria-label="Stores" hidden>
+          <header class="stores-header">
+            <div class="stores-search-bar">
+              <span class="stores-search-icon" aria-hidden="true">⌕</span>
+              <span class="stores-search-placeholder">Search stores or location</span>
+            </div>
+            <button class="stores-close js-stores-close" aria-label="Close">✕</button>
+          </header>
+          <div class="stores-map-wrap">
+            <div class="stores-map-surface" id="stores-map">
+              <div class="stores-map-marker stores-marker-you" title="You">You</div>
+              <div class="stores-map-marker stores-marker-friend js-friend-marker" data-friend="Alex" style="left: 28%; top: 22%;" title="Tap to invite Alex">A</div>
+              <div class="stores-map-marker stores-marker-friend js-friend-marker" data-friend="Jordan" style="left: 62%; top: 38%;" title="Tap to invite Jordan">J</div>
+              <div class="stores-map-marker stores-marker-friend js-friend-marker" data-friend="Sarah" style="left: 48%; top: 55%;" title="Tap to invite Sarah">S</div>
+              <div class="stores-map-marker stores-marker-store" style="left: 22%; top: 45%;" title="Store">●</div>
+              <div class="stores-map-marker stores-marker-store" style="left: 72%; top: 28%;" title="Store">●</div>
+              <div class="stores-map-marker stores-marker-store" style="left: 55%; top: 62%;" title="Store">●</div>
+            </div>
+            <p class="stores-map-invite-hint">Tap a friend on the map to invite them to a group order</p>
+            <span class="stores-map-legal">Maps</span>
+          </div>
+          <div class="stores-tabs">
+            <button class="stores-tab is-active" data-tab="nearby">Nearby</button>
+            <button class="stores-tab" data-tab="previous">Previous</button>
+            <button class="stores-tab" data-tab="favorites">Favorites</button>
+          </div>
+          <div class="stores-list-wrap">
+            <article class="stores-entry">
+              <div class="stores-entry-main">
+                <h3 class="stores-entry-name">Liberty Ave @ Family House</h3>
+                <p class="stores-entry-address">5310 Liberty Avenue, Pittsburgh</p>
+                <p class="stores-entry-meta">0.5 mi · Open until 9:00 PM</p>
+                <p class="stores-entry-badge">In store</p>
+              </div>
+              <div class="stores-entry-actions">
+                <button class="stores-entry-icon" aria-label="Favorite">♡</button>
+                <button class="stores-entry-icon" aria-label="Info">ⓘ</button>
+              </div>
+            </article>
+            <article class="stores-entry">
+              <div class="stores-entry-main">
+                <h3 class="stores-entry-name">Craig Street / Oakland</h3>
+                <p class="stores-entry-address">3700 Forbes Ave, Pittsburgh</p>
+                <p class="stores-entry-meta">0.8 mi · Open until 8:00 PM</p>
+                <p class="stores-entry-badge">In store</p>
+              </div>
+              <div class="stores-entry-actions">
+                <button class="stores-entry-icon" aria-label="Favorite">♡</button>
+                <button class="stores-entry-icon" aria-label="Info">ⓘ</button>
+              </div>
+            </article>
+            <article class="stores-entry">
+              <div class="stores-entry-main">
+                <h3 class="stores-entry-name">Fifth Ave / Shadyside</h3>
+                <p class="stores-entry-address">5522 Walnut St, Pittsburgh</p>
+                <p class="stores-entry-meta">1.2 mi · Open until 7:00 PM</p>
+                <p class="stores-entry-badge">In store</p>
+              </div>
+              <div class="stores-entry-actions">
+                <button class="stores-entry-icon" aria-label="Favorite">♡</button>
+                <button class="stores-entry-icon" aria-label="Info">ⓘ</button>
+              </div>
+            </article>
+          </div>
+          <div class="stores-friends-section">
+            <h3 class="stores-friends-heading">Friends on the map</h3>
+            <p class="stores-friends-desc">Tap a friend above to invite them, or start a group order to get a code to share.</p>
+            <div class="stores-friends-invite-row">
+              <button type="button" class="stores-invite-friend js-invite-friend" data-friend="Alex">Invite Alex</button>
+              <button type="button" class="stores-invite-friend js-invite-friend" data-friend="Jordan">Invite Jordan</button>
+              <button type="button" class="stores-invite-friend js-invite-friend" data-friend="Sarah">Invite Sarah</button>
+            </div>
+            <button type="button" class="primary-button full-width js-stores-start-group">
+              Start group order & get share code
+            </button>
+          </div>
         </section>
 
         <section class="screen screen-order" aria-label="Menu" hidden>
           <header class="order-header">
-            <div>
+            <div class="order-header-text">
               <p class="order-eyebrow">Menu</p>
               <h1 class="order-title">Browse & build the ritual</h1>
             </div>
-            <button class="avatar-button" aria-label="Profile">
-              <span class="avatar-initial">H</span>
+            <button class="order-avatar" aria-label="Profile">
+              <span class="order-avatar-initial">H</span>
             </button>
           </header>
 
-          <section class="group-banner js-group-banner">
-            <div class="group-banner-text">
-              <p class="group-banner-title">Start a group order</p>
-              <p class="group-banner-subtitle">
-                Friends can add their drinks and pick up together.
-              </p>
+          <section class="order-group-banner js-group-banner">
+            <div class="order-group-banner-text">
+              <p class="order-group-banner-title">Start a group order</p>
+              <p class="order-group-banner-subtitle">Friends can add their drinks and pick up together.</p>
             </div>
-            <button class="group-banner-cta js-start-group">Start</button>
+            <button type="button" class="order-group-banner-cta js-start-group">Start</button>
           </section>
 
-          <section class="category-chips" aria-label="Drink categories">
-            <button class="chip is-selected">Coffee</button>
-            <button class="chip">Tea</button>
-            <button class="chip">Bakery</button>
-            <button class="chip">Cold Brew</button>
-            <button class="chip">Seasonal</button>
+          <section class="order-category-chips" aria-label="Drink categories">
+            <button type="button" class="order-chip is-selected js-order-chip" data-category="all">All</button>
+            <button type="button" class="order-chip js-order-chip" data-category="coffee">Coffee</button>
+            <button type="button" class="order-chip js-order-chip" data-category="tea">Tea</button>
+            <button type="button" class="order-chip js-order-chip" data-category="bakery">Bakery</button>
+            <button type="button" class="order-chip js-order-chip" data-category="coldbrew">Cold Brew</button>
+            <button type="button" class="order-chip js-order-chip" data-category="seasonal">Seasonal</button>
           </section>
 
-          <section class="product-grid" aria-label="Featured drinks">
-            <article class="product-card">
-              <div class="product-image product-image-1">
-                <img src="images/cappuccino.jpg" alt="Cappuccino" />
-              </div>
-              <div class="product-body">
-                <div class="product-title-row">
+          <section class="product-grid product-grid-two js-product-grid" aria-label="Featured drinks">
+            <article class="product-card js-product-card" data-category="coffee">
+              <button type="button" class="product-card-trigger js-customize" data-drink="Cappuccino" data-base-price="4.20" data-image="images/cappuccino.jpg" data-desc="Espresso and steamed milk, topped with a deep layer of foam. Simple and smooth.">
+                <div class="product-image product-image-1">
+                  <img src="images/cappuccino.jpg" alt="Cappuccino" />
+                </div>
+                <div class="product-card-info">
                   <h2 class="product-title">Cappuccino</h2>
                   <span class="product-price">$4.20</span>
                 </div>
-                <p class="product-meta">Double shot • Velvety foam</p>
-                <div class="product-actions">
-                  <button
-                    class="secondary-pill js-customize"
-                    data-drink="Cappuccino"
-                    data-base-price="4.20"
-                    data-image="images/cappuccino.jpg"
-                    data-desc="Espresso and steamed milk, topped with a deep layer of foam. Simple and smooth."
-                  >
-                    Customize
-                  </button>
-                  <button class="primary-pill">Add to cart</button>
-                </div>
-              </div>
+              </button>
+              <button type="button" class="product-add-btn js-add-cart" aria-label="Add Cappuccino to cart">
+                <span class="product-add-icon">+</span>
+              </button>
             </article>
 
-            <article class="product-card">
-              <div class="product-image product-image-2">
-                <img src="images/icedmatchaoatlatte.jpeg" alt="Iced Matcha Oat Latte" />
-              </div>
-              <div class="product-body">
-                <div class="product-title-row">
-                  <h2 class="product-title">Iced Matcha Oat Latte</h2>
+            <article class="product-card js-product-card" data-category="tea">
+              <button type="button" class="product-card-trigger js-customize" data-drink="Iced Matcha Latte" data-base-price="5.10" data-image="images/icedmatchaoatlatte.jpeg" data-desc="Lightly sweet, extra smooth. Our matcha and oat milk blend over ice—perfect for a walk.">
+                <div class="product-image product-image-2">
+                  <img src="images/icedmatchaoatlatte.jpeg" alt="Iced Matcha Latte" />
+                </div>
+                <div class="product-card-info">
+                  <h2 class="product-title">Iced Matcha Latte</h2>
                   <span class="product-price">$5.10</span>
                 </div>
-                <p class="product-meta">Earthy • Lightly sweet</p>
-                <div class="product-actions">
-                  <button
-                    class="secondary-pill js-customize"
-                    data-drink="Iced Matcha Oat Latte"
-                    data-base-price="5.10"
-                    data-image="images/icedmatchaoatlatte.jpeg"
-                    data-desc="Lightly sweet, extra smooth. Our matcha and oat milk blend over ice—perfect for a walk."
-                  >
-                    Customize
-                  </button>
-                  <button class="primary-pill">Add to cart</button>
-                </div>
-              </div>
+              </button>
+              <button type="button" class="product-add-btn js-add-cart" aria-label="Add Iced Matcha Latte to cart">
+                <span class="product-add-icon">+</span>
+              </button>
             </article>
 
-            <article class="product-card">
-              <div class="product-image product-image-3">
-                <img src="images/caramelcoldbrew.jpg" alt="Caramel Cold Brew" />
-              </div>
-              <div class="product-body">
-                <div class="product-title-row">
+            <article class="product-card js-product-card" data-category="coffee">
+              <button type="button" class="product-card-trigger js-customize" data-drink="Caramel Cold Brew" data-base-price="4.85" data-image="images/caramelcoldbrew.jpg" data-desc="Cold brew with a touch of caramel and a splash of milk. Smooth and refreshing.">
+                <div class="product-image product-image-3">
+                  <img src="images/caramelcoldbrew.jpg" alt="Caramel Cold Brew" />
+                </div>
+                <div class="product-card-info">
                   <h2 class="product-title">Caramel Cold Brew</h2>
                   <span class="product-price">$4.85</span>
                 </div>
-                <p class="product-meta">Slow-steeped • Over ice</p>
-                <div class="product-actions">
-                  <button
-                    class="secondary-pill js-customize"
-                    data-drink="Caramel Cold Brew"
-                    data-base-price="4.85"
-                    data-image="images/caramelcoldbrew.jpg"
-                    data-desc="Cold brew with a touch of caramel and a splash of milk. Smooth and refreshing."
-                  >
-                    Customize
-                  </button>
-                  <button class="primary-pill">Add to cart</button>
+              </button>
+              <button type="button" class="product-add-btn js-add-cart" aria-label="Add Caramel Cold Brew to cart">
+                <span class="product-add-icon">+</span>
+              </button>
+            </article>
+
+            <article class="product-card js-product-card" data-category="coffee">
+              <button type="button" class="product-card-trigger js-customize" data-drink="Americano" data-base-price="3.95" data-image="images/americano.png" data-desc="Espresso and hot water. Bold, smooth, and simple.">
+                <div class="product-image product-image-4">
+                  <img src="images/americano.png" alt="Americano" />
                 </div>
-              </div>
+                <div class="product-card-info">
+                  <h2 class="product-title">Americano</h2>
+                  <span class="product-price">$3.95</span>
+                </div>
+              </button>
+              <button type="button" class="product-add-btn js-add-cart" aria-label="Add Americano to cart">
+                <span class="product-add-icon">+</span>
+              </button>
             </article>
           </section>
         </section>
@@ -230,14 +310,14 @@
           aria-label="Group session status"
           hidden
         >
-          <div class="session-rail-left">
+          <button type="button" class="session-rail-left js-session-rail-to-share" aria-label="Go to group order to add more people">
             <div class="avatar-circle avatar-small">A</div>
             <div class="avatar-circle avatar-small avatar-offset-1">J</div>
             <div class="avatar-circle avatar-small avatar-offset-2">S</div>
             <div class="session-rail-copy">
               <p class="session-rail-title">Group order in progress</p>
             </div>
-          </div>
+          </button>
           <button type="button" class="shared-cart-pill js-shared-cart-pill">
             <span class="shared-cart-text">Group cart</span>
             <span class="shared-cart-count js-cart-count">0</span>
@@ -249,20 +329,20 @@
           aria-label="Customize drink"
           hidden
         >
-          <div class="custom-top-card">
-            <div class="custom-top-bar">
-              <button
-                class="custom-back-circle js-custom-back"
-                aria-label="Back to menu"
-              >
-                <span class="custom-chevron">‹</span>
-              </button>
-              <button class="custom-fav-circle" aria-label="Favorite">
-                <svg class="custom-heart" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
-                </svg>
-              </button>
-            </div>
+          <header class="custom-header-green">
+            <button
+              class="custom-back-circle js-custom-back"
+              aria-label="Back to menu"
+            >
+              <span class="custom-chevron">‹</span>
+            </button>
+            <h1 class="custom-header-title">Details</h1>
+            <button class="custom-bookmark" aria-label="Save">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+            </button>
+          </header>
+
+          <div class="custom-hero-green">
             <div class="custom-image-wrap">
               <img
                 src="images/icedmatchaoatlatte.jpeg"
@@ -273,38 +353,22 @@
           </div>
 
           <div class="custom-info-card">
-            <h1 class="custom-title js-custom-title">Iced Matcha Oat Latte</h1>
+            <h2 class="custom-title js-custom-title">Iced Matcha Latte</h2>
+            <p class="custom-desc-text js-custom-desc">
+              Lightly sweet, extra smooth. Our matcha and oat milk blend over ice—perfect for a walk.
+            </p>
 
-            <section class="custom-desc-section">
-              <h2 class="custom-desc-heading">Description</h2>
-              <p class="custom-desc-text js-custom-desc">
-                Lightly sweet, extra smooth. Our matcha and oat milk blend over ice—perfect for a walk.
-              </p>
-            </section>
-
-            <section class="size-section">
-              <h2 class="size-heading">Size options</h2>
-              <div class="size-options">
-                <button class="size-card" data-size="tall">
-                  <span class="size-icon">☕</span>
-                  <span class="size-label">Tall</span>
-                  <span class="size-sub">12 fl oz</span>
-                </button>
-                <button class="size-card is-selected" data-size="grande">
-                  <span class="size-icon">☕</span>
-                  <span class="size-label">Grande</span>
-                  <span class="size-sub">16 fl oz</span>
-                </button>
-                <button class="size-card" data-size="venti">
-                  <span class="size-icon">☕</span>
-                  <span class="size-label">Venti</span>
-                  <span class="size-sub">24 fl oz</span>
-                </button>
+            <section class="size-section size-section-inline">
+              <div class="size-inline-options" role="group" aria-label="Size">
+                <button type="button" class="size-inline-opt size-card" data-size="tall">Small</button>
+                <button type="button" class="size-inline-opt size-card is-selected" data-size="grande">Medium</button>
+                <button type="button" class="size-inline-opt size-card" data-size="venti">Large</button>
+                <button type="button" class="size-inline-opt size-card" data-size="venti">Xtra Large</button>
               </div>
             </section>
 
             <section class="modifier-section">
-              <h2 class="modifier-heading">Milk</h2>
+              <h3 class="modifier-heading">Milk</h3>
               <div class="modifier-chips">
                 <button class="modifier-chip is-selected">Oat</button>
                 <button class="modifier-chip">Whole</button>
@@ -313,7 +377,7 @@
             </section>
 
             <section class="modifier-section">
-              <h2 class="modifier-heading">Matcha scoops</h2>
+              <h3 class="modifier-heading">Matcha scoops</h3>
               <div class="scoops-row">
                 <p class="scoops-hint">More scoops, more flavor (+$0.50 each)</p>
                 <div class="scoops-stepper">
@@ -324,35 +388,43 @@
               </div>
             </section>
 
+            <section class="modifier-section custom-qty-section">
+              <h3 class="modifier-heading">Quantity</h3>
+              <div class="custom-qty-stepper">
+                <button type="button" class="custom-qty-btn js-qty-minus" aria-label="Decrease quantity">−</button>
+                <span class="custom-qty-value js-qty-value">1</span>
+                <button type="button" class="custom-qty-btn custom-qty-plus js-qty-plus" aria-label="Increase quantity">+</button>
+              </div>
+            </section>
+
             <section class="modifier-section">
-              <h2 class="modifier-heading">Notes</h2>
+              <h3 class="modifier-heading">Notes</h3>
               <p class="modifier-note">
                 Your barista will see these customizations so they can reduce taps and focus on the pour.
               </p>
             </section>
 
-            <div class="custom-qty-price-row">
-              <div class="custom-qty-block">
-                <p class="custom-qty-label">Quantity</p>
-                <div class="custom-qty-stepper">
-                  <button type="button" class="custom-qty-btn js-qty-minus" aria-label="Decrease quantity">−</button>
-                  <span class="custom-qty-value js-qty-value">1</span>
-                  <button type="button" class="custom-qty-btn custom-qty-plus js-qty-plus" aria-label="Increase quantity">+</button>
-                </div>
+            <div class="custom-bottom-actions">
+              <div class="custom-price-block">
+                <span class="custom-price-current">$<span class="js-custom-total">5.10</span></span>
+                <span class="custom-price-old" aria-hidden="true">$8.00</span>
               </div>
-              <p class="custom-price-display">$<span class="js-custom-total">5.10</span></p>
+              <button type="button" class="custom-place-order-btn custom-place-order-btn--pill js-custom-add">
+                <span class="custom-place-order-label">Place order</span>
+                <span class="custom-place-order-total">$<span class="js-custom-total-btn">5.10</span></span>
+              </button>
             </div>
 
-            <button class="primary-button full-width custom-order-btn js-custom-add">
-              Add to group cart
-            </button>
+            <p class="custom-disclaimer">
+              Customizations may vary by location. All prices and availability subject to change.
+            </p>
           </div>
         </section>
 
         <section class="screen screen-cart" aria-label="Group cart" hidden>
-          <header class="cart-header">
-            <p class="order-eyebrow">Group cart</p>
-            <h1 class="cart-title">Everyone’s drinks</h1>
+          <header class="group-screen-header cart-header">
+            <button type="button" class="back-button js-cart-back" aria-label="Back to order">←</button>
+            <h1 class="group-screen-title cart-title">Everyone’s drinks</h1>
           </header>
 
           <section class="cart-list js-cart-list" aria-label="Group cart items">
@@ -439,6 +511,18 @@
           </div>
         </section>
 
+        <div class="invite-modal js-invite-modal" aria-label="Invite to group order" hidden>
+          <div class="invite-modal-backdrop js-invite-modal-close"></div>
+          <div class="invite-modal-card">
+            <h2 class="invite-modal-title js-invite-modal-title">Invite Alex to a group order?</h2>
+            <p class="invite-modal-body">You'll get a code to share so they can add their drinks and pick up together.</p>
+            <div class="invite-modal-actions">
+              <button type="button" class="invite-modal-cancel js-invite-modal-cancel">Cancel</button>
+              <button type="button" class="primary-button js-invite-modal-confirm">Get code</button>
+            </div>
+          </div>
+        </div>
+
         <section
           class="host-modal"
           aria-label="Confirm host pays for everyone"
@@ -463,69 +547,70 @@
         </section>
 
         <section class="screen screen-share" aria-label="Share group order" hidden>
-          <header class="group-screen-header">
-            <button class="back-button js-back-to-home" aria-label="Back">
-              ←
+          <header class="share-header">
+            <button type="button" class="share-back js-back-to-home" aria-label="Back">
+              <span class="share-back-icon">‹</span>
             </button>
-            <h1 class="group-screen-title">Start group order</h1>
+            <h1 class="share-title">Start group order</h1>
           </header>
 
-          <section class="group-code-card">
-            <p class="group-section-label">Code to join</p>
-            <p class="group-code-desc">Share this code so friends can add their drinks and pick up together.</p>
-            <div class="group-code-row">
-              <div class="group-code-value">R1TU4L</div>
-              <button type="button" class="group-code-copy">Copy</button>
-            </div>
-            <button type="button" class="primary-button full-width group-code-share">
-              Share code
+          <div class="share-content">
+            <section class="share-card share-host-section">
+              <p class="share-label">Group host</p>
+              <div class="share-host-row">
+                <div class="share-avatar share-avatar-host">H</div>
+                <div class="share-host-info">
+                  <p class="share-host-name">Hanara</p>
+                  <p class="share-host-role">Group host</p>
+                </div>
+              </div>
+            </section>
+
+            <section class="share-card share-code-card">
+              <p class="share-label">Code to join</p>
+              <p class="share-desc">Share this code so friends can add their drinks and pick up together.</p>
+              <div class="share-code-row">
+                <span class="share-code-value">R1TU4L</span>
+                <button type="button" class="share-code-copy">Copy</button>
+              </div>
+              <button type="button" class="share-btn-primary full-width group-code-share">
+                Share code
+              </button>
+            </section>
+
+            <section class="share-members-section">
+              <p class="share-label">Friends that joined this room</p>
+              <p class="share-members-empty">Share the code above so friends can join. When they do, they’ll show up in the circles below.</p>
+              <div class="share-members-grid js-share-members" aria-label="Friends that joined">
+                <div class="share-member-slot" aria-label="Empty slot"><span class="share-member-add">+</span></div>
+                <div class="share-member-slot" aria-label="Empty slot"><span class="share-member-add">+</span></div>
+                <div class="share-member-slot" aria-label="Empty slot"><span class="share-member-add">+</span></div>
+                <div class="share-member-slot" aria-label="Empty slot"><span class="share-member-add">+</span></div>
+              </div>
+            </section>
+
+            <button type="button" class="share-btn-primary full-width js-share-start-order">
+              Start ordering
             </button>
-          </section>
-
-          <section class="group-host-section">
-            <p class="group-section-label">Group host</p>
-            <div class="group-host-row">
-              <div class="group-avatar group-avatar-host">H</div>
-              <div class="group-host-info">
-                <p class="group-host-name">Hanara</p>
-                <p class="group-host-role">Group host</p>
-              </div>
-            </div>
-          </section>
-
-          <section class="group-members-section">
-            <p class="group-section-label">Friends that joined this room</p>
-            <p class="group-members-empty">Share the code above so friends can join. When they do, they’ll show up here.</p>
-            <div class="group-members-grid group-members-invite">
-              <div class="group-member-slot">
-                <span class="group-member-add">+</span>
-              </div>
-              <div class="group-member-slot">
-                <span class="group-member-add">+</span>
-              </div>
-              <div class="group-member-slot">
-                <span class="group-member-add">+</span>
-              </div>
-              <div class="group-member-slot">
-                <span class="group-member-add">+</span>
-              </div>
-            </div>
-          </section>
-
-          <section class="group-send-via">
-            <p class="group-section-label">Or send via</p>
-            <div class="group-app-row">
-              <button type="button" class="group-app-btn app-icon-slack">S</button>
-              <button type="button" class="group-app-btn app-icon-ig">IG</button>
-              <button type="button" class="group-app-btn app-icon-msg">SMS</button>
-              <button type="button" class="group-app-btn app-icon-more">⋯</button>
-            </div>
-          </section>
-
-          <button type="button" class="secondary-full js-to-lobby">
-            See who joined
-          </button>
+            <button type="button" class="share-cancel-session js-share-cancel-session">
+              Cancel session
+            </button>
+          </div>
         </section>
+
+        <div class="share-send-modal js-share-send-modal" aria-label="Share code" hidden>
+          <div class="share-send-modal-backdrop js-share-send-close"></div>
+          <div class="share-send-modal-card">
+            <button type="button" class="share-send-modal-close js-share-send-close" aria-label="Close">×</button>
+            <p class="share-label">Or send via</p>
+            <div class="share-app-row">
+              <button type="button" class="share-app-btn app-icon-slack">S</button>
+              <button type="button" class="share-app-btn app-icon-ig">IG</button>
+              <button type="button" class="share-app-btn app-icon-msg">SMS</button>
+              <button type="button" class="share-app-btn app-icon-more">⋯</button>
+            </div>
+          </div>
+        </div>
 
         <section class="screen screen-lobby" aria-label="Friends lobby" hidden>
           <header class="group-screen-header">
@@ -628,6 +713,7 @@
       const tabItems = document.querySelectorAll(".tab-item");
       const screens = {
         home: document.querySelector(".screen-home"),
+        stores: document.querySelector(".screen-stores"),
         order: document.querySelector(".screen-order"),
         share: document.querySelector(".screen-share"),
         lobby: document.querySelector(".screen-lobby"),
@@ -653,22 +739,106 @@
         updateSessionRailVisibility();
       }
 
+      let currentScreen = "home";
+
       function updateSessionRailVisibility() {
-        const show = inGroupSession && !orderPlaced;
+        const show = inGroupSession && !orderPlaced && currentScreen !== "cart";
         if (sessionRail) {
           sessionRail.classList.toggle("is-visible", show);
           sessionRail.toggleAttribute("hidden", !show);
         }
       }
 
+      let shareFillTimeout = null;
+
+      function getShareMembersEl() {
+        return document.querySelector(".js-share-members");
+      }
+
+      function resetShareMembersToEmpty() {
+        const el = getShareMembersEl();
+        if (!el) return;
+        el.innerHTML = [
+          '<div class="share-member-slot" aria-label="Empty slot"><span class="share-member-add">+</span></div>',
+          '<div class="share-member-slot" aria-label="Empty slot"><span class="share-member-add">+</span></div>',
+          '<div class="share-member-slot" aria-label="Empty slot"><span class="share-member-add">+</span></div>',
+          '<div class="share-member-slot" aria-label="Empty slot"><span class="share-member-add">+</span></div>'
+        ].join("");
+      }
+
+      function fillShareMembersDemo() {
+        const el = getShareMembersEl();
+        if (!el) return;
+        const joined = [
+          { name: "Alex", img: "images/person1.png" },
+          { name: "Jordan", img: "images/person2.png" },
+          { name: "Sarah", img: "images/person3.png" }
+        ];
+        const slots = joined.map(
+          (p) =>
+            `<div class="share-member-joined" title="${p.name}"><img src="${p.img}" alt="${p.name}" class="share-member-img"></div>`
+        );
+        const empty = '<div class="share-member-slot" aria-label="Empty slot"><span class="share-member-add">+</span></div>';
+        el.innerHTML = slots.join("") + empty;
+      }
+
+      let shareSendModalCloseTimeout = null;
+      function closeShareSendModal() {
+        const shareSendModal = document.querySelector(".js-share-send-modal");
+        if (!shareSendModal) return;
+        if (shareSendModalCloseTimeout) {
+          clearTimeout(shareSendModalCloseTimeout);
+          shareSendModalCloseTimeout = null;
+        }
+        shareSendModal.classList.remove("is-open");
+        shareSendModalCloseTimeout = setTimeout(() => {
+          shareSendModal.setAttribute("hidden", "");
+          shareSendModalCloseTimeout = null;
+        }, 300);
+      }
+
+      function closeCustomizeOverlay() {
+        const el = screens.customize;
+        if (el) {
+          el.classList.remove("is-open");
+          el.setAttribute("hidden", "");
+        }
+        sessionRail?.classList.remove("is-compact");
+      }
+
+      function openCustomizeOverlay() {
+        const el = screens.customize;
+        if (!el) return;
+        const labelEl = el.querySelector(".custom-place-order-label");
+        if (labelEl) labelEl.textContent = inGroupSession ? "Add to cart" : "Place order";
+        el.removeAttribute("hidden");
+        if (inGroupSession && sessionRail) sessionRail.classList.add("is-compact");
+        requestAnimationFrame(() => el.classList.add("is-open"));
+      }
+
       function showScreen(target) {
+        closeShareSendModal();
+        closeCustomizeOverlay();
         if (target === "cart") renderCart();
+        if (shareFillTimeout) {
+          clearTimeout(shareFillTimeout);
+          shareFillTimeout = null;
+        }
+        if (target === "share") {
+          resetShareMembersToEmpty();
+          shareFillTimeout = setTimeout(() => {
+            fillShareMembersDemo();
+            shareFillTimeout = null;
+          }, 2500);
+        }
         Object.entries(screens).forEach(([key, el]) => {
           if (!el) return;
           const isTarget = key === target;
           el.classList.toggle("is-visible", isTarget);
           el.toggleAttribute("hidden", !isTarget);
         });
+        currentScreen = target;
+        updateSessionRailVisibility();
       }
 
       tabItems.forEach((tab) => {
@@ -689,14 +859,17 @@
       });
 
       const startGroupButtons = document.querySelectorAll(".js-start-group");
+      const storesCloseBtn = document.querySelector(".js-stores-close");
+      const storesStartGroupBtn = document.querySelector(".js-stores-start-group");
+      const explorePromoButtons = document.querySelectorAll(".js-explore-promo");
+      const quickStoresBtn = document.querySelector(".js-quick-stores");
       const backToHome = document.querySelector(".js-back-to-home");
       const toLobby = document.querySelector(".js-to-lobby");
+      const shareStartOrder = document.querySelector(".js-share-start-order");
       const lobbyStartOrder = document.querySelector(".js-lobby-start-order");
       const cartCountEl = document.querySelector(".js-cart-count");
       const sessionRail = document.querySelector(".session-rail");
-      const addToCartButtons = document.querySelectorAll(
-        ".product-card .primary-pill"
-      );
+      const addToCartButtons = document.querySelectorAll(".js-add-cart");
       const customizeButtons = document.querySelectorAll(".js-customize");
       const customBack = document.querySelector(".js-custom-back");
       const customTitle = document.querySelector(".js-custom-title");
@@ -752,6 +925,15 @@
         showScreen("home");
       });
 
+      document.querySelector(".js-cart-back")?.addEventListener("click", () => {
+        const orderTab = document.querySelector('.tab-item[data-target="order"]');
+        if (orderTab) {
+          tabItems.forEach((t) => t.classList.remove("is-active"));
+          orderTab.classList.add("is-active");
+        }
+        showScreen("order");
+      });
+
       document.querySelector(".js-back-to-lobby-back")?.addEventListener("click", () => {
         showScreen("share");
       });
@@ -761,6 +943,42 @@
         showScreen("lobby");
       });
 
+      shareStartOrder?.addEventListener("click", () => {
+        setGroupSession(true);
+        const orderTab = document.querySelector('.tab-item[data-target="order"]');
+        if (orderTab) {
+          tabItems.forEach((t) => t.classList.remove("is-active"));
+          orderTab.classList.add("is-active");
+        }
+        showScreen("order");
+      });
+
+      const shareSendModal = document.querySelector(".js-share-send-modal");
+      document.querySelector(".group-code-share")?.addEventListener("click", (e) => {
+        const shareScreen = screens.share;
+        if (!shareScreen || shareScreen.hasAttribute("hidden")) return;
+        if (shareSendModal) {
+          if (shareSendModalCloseTimeout) {
+            clearTimeout(shareSendModalCloseTimeout);
+            shareSendModalCloseTimeout = null;
+          }
+          shareSendModal.removeAttribute("hidden");
+          requestAnimationFrame(() => {
+            shareSendModal.classList.add("is-open");
+          });
+        }
+      });
+      document.querySelectorAll(".js-share-send-close").forEach((btn) => {
+        btn.addEventListener("click", () => closeShareSendModal());
+      });
+      if (shareSendModal) {
+        shareSendModal.addEventListener("click", (e) => {
+          if (e.target === shareSendModal || e.target.classList.contains("share-send-modal-backdrop")) {
+            closeShareSendModal();
+          }
+        });
+      }
+
       lobbyStartOrder?.addEventListener("click", () => {
         const orderTab = document.querySelector(
           '.tab-item[data-target="order"]'
@@ -769,6 +987,85 @@
         orderTab?.classList.add("is-active");
         setGroupSession(true);
         showScreen("order");
+      });
+
+      quickStoresBtn?.addEventListener("click", () => {
+        showScreen("stores");
+      });
+
+      storesCloseBtn?.addEventListener("click", () => {
+        showScreen("home");
+      });
+
+      storesStartGroupBtn?.addEventListener("click", () => {
+        setGroupSession(true);
+        showScreen("share");
+      });
+
+      const inviteModal = document.querySelector(".js-invite-modal");
+      const inviteModalTitle = document.querySelector(".js-invite-modal-title");
+      const inviteModalCancel = document.querySelector(".js-invite-modal-cancel");
+      const inviteModalConfirm = document.querySelector(".js-invite-modal-confirm");
+
+      function openInviteModal(friendName) {
+        if (inviteModalTitle) inviteModalTitle.textContent = "Invite " + friendName + " to a group order?";
+        if (inviteModal) {
+          inviteModal.setAttribute("data-pending-friend", friendName);
+          inviteModal.hidden = false;
+        }
+      }
+
+      function closeInviteModal() {
+        if (inviteModal) {
+          inviteModal.hidden = true;
+          inviteModal.removeAttribute("data-pending-friend");
+        }
+      }
+
+      function inviteFriendToGroupOrder(friendName) {
+        openInviteModal(friendName);
+      }
+
+      inviteModalConfirm?.addEventListener("click", () => {
+        setGroupSession(true);
+        showScreen("share");
+        closeInviteModal();
+      });
+
+      inviteModalCancel?.addEventListener("click", closeInviteModal);
+      document.querySelector(".js-invite-modal-close")?.addEventListener("click", closeInviteModal);
+
+      document.querySelectorAll(".js-friend-marker").forEach((marker) => {
+        marker.addEventListener("click", () => {
+          const friend = marker.getAttribute("data-friend") || "Friend";
+          inviteFriendToGroupOrder(friend);
+        });
+      });
+
+      document.querySelectorAll(".js-invite-friend").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const friend = btn.getAttribute("data-friend") || "Friend";
+          inviteFriendToGroupOrder(friend);
+        });
+      });
+
+      document.querySelectorAll(".stores-tab").forEach((tab) => {
+        tab.addEventListener("click", () => {
+          document.querySelectorAll(".stores-tab").forEach((t) => t.classList.remove("is-active"));
+          tab.classList.add("is-active");
+        });
+      });
+
+      explorePromoButtons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const target = btn.getAttribute("data-target") || "order";
+          const orderTab = document.querySelector('.tab-item[data-target="order"]');
+          if (orderTab) {
+            tabItems.forEach((t) => t.classList.remove("is-active"));
+            orderTab.classList.add("is-active");
+          }
+          showScreen(target);
+        });
       });
 
       function addToSharedCart(item) {
@@ -789,7 +1086,8 @@
       }
 
       addToCartButtons.forEach((btn) =>
-        btn.addEventListener("click", () => {
+        btn.addEventListener("click", (e) => {
+          e.stopPropagation();
           const card = btn.closest(".product-card");
           if (!card) return incrementSharedCart();
           const name = card.querySelector(".product-title")?.textContent?.trim() || "Drink";
@@ -800,13 +1098,30 @@
         })
       );
 
+      document.querySelectorAll(".js-order-chip").forEach((chip) => {
+        chip.addEventListener("click", () => {
+          document.querySelectorAll(".js-order-chip").forEach((c) => c.classList.remove("is-selected"));
+          chip.classList.add("is-selected");
+          const category = chip.getAttribute("data-category") || "all";
+          const grid = document.querySelector(".js-product-grid");
+          if (!grid) return;
+          grid.querySelectorAll(".js-product-card").forEach((card) => {
+            const cardCat = card.getAttribute("data-category") || "";
+            const show = category === "all" || cardCat === category;
+            card.style.display = show ? "" : "none";
+          });
+        });
+      });
+
       let customQty = 1;
 
       function updateCustomTotal() {
         const extras = Math.max(0, currentScoops - 2);
         const unitTotal = currentBasePrice + extras * 0.5;
         const total = unitTotal * customQty;
-        if (customTotal) customTotal.textContent = total.toFixed(2);
+        const str = total.toFixed(2);
+        if (customTotal) customTotal.textContent = str;
+        document.querySelectorAll(".js-custom-total-btn").forEach((el) => { el.textContent = str; });
       }
 
       customizeButtons.forEach((btn) =>
@@ -831,13 +1146,24 @@
           sizeCards.forEach((c, i) => {
             c.classList.toggle("is-selected", i === 1);
           });
+          document.querySelectorAll(".js-custom-total-btn").forEach((el) => {
+            el.textContent = (currentBasePrice + Math.max(0, currentScoops - 2) * 0.5).toFixed(2);
+          });
           updateCustomTotal();
-          showScreen("customize");
+          openCustomizeOverlay();
         })
       );
 
       customBack?.addEventListener("click", () => {
-        showScreen("order");
+        const el = screens.customize;
+        if (el) {
+          el.classList.remove("is-open");
+          sessionRail?.classList.remove("is-compact");
+          el.addEventListener("transitionend", function onEnd() {
+            el.removeEventListener("transitionend", onEnd);
+            el.setAttribute("hidden", "");
+          }, { once: true });
+        }
       });
 
       scoopsMinus?.addEventListener("click", () => {
@@ -859,9 +1185,9 @@
         })
       );
 
-      sizeCards.forEach((card) =>
+      document.querySelectorAll(".size-card").forEach((card) =>
         card.addEventListener("click", () => {
-          sizeCards.forEach((c) => c.classList.remove("is-selected"));
+          document.querySelectorAll(".size-card").forEach((c) => c.classList.remove("is-selected"));
           card.classList.add("is-selected");
         })
       );
@@ -941,6 +1267,12 @@
         return div.innerHTML;
       }
 
+      document.querySelector(".js-session-rail-to-share")?.addEventListener("click", (e) => {
+        e.stopPropagation();
+        if (!inGroupSession) return;
+        showScreen("share");
+      });
+
       document.querySelector(".js-shared-cart-pill")?.addEventListener("click", (e) => {
         e.stopPropagation();
         if (!inGroupSession) return;
@@ -948,6 +1280,25 @@
         tabItems.forEach((t) => t.classList.remove("is-active"));
         cartTab?.classList.add("is-active");
         showScreen(orderPlaced ? "status" : "cart");
+      });
+
+      function cancelGroupSession() {
+        setGroupSession(false);
+        sharedCart.length = 0;
+        sharedCartCount = 0;
+        if (cartCountEl) cartCountEl.textContent = "0";
+        updateSessionRailVisibility();
+        renderCart();
+      }
+
+      document.querySelector(".js-share-cancel-session")?.addEventListener("click", () => {
+        cancelGroupSession();
+        const homeTab = document.querySelector('.tab-item[data-target="home"]');
+        if (homeTab) {
+          tabItems.forEach((t) => t.classList.remove("is-active"));
+          homeTab.classList.add("is-active");
+        }
+        showScreen("home");
       });
 
       splitToggle?.addEventListener("click", () => {
@@ -1042,6 +1393,7 @@
       });
 
       function clearOrderAfterPickup() {
+        setGroupSession(false);
         sharedCart.length = 0;
         sharedCartCount = 0;
         orderPlaced = false;
